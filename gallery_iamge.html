@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="gallery_image.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Background Image Example</title>
+<style>
+  .background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url(assets/images/pexels-leon-ardho-1552252.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px); /* Adjust the blur intensity as needed */
+  }
+</style>
+</head>
+<body>
+<!-- Background container for the blurred image -->
+<div class="background-container"></div>
+
+<div class="marquee">
+    <div class="marquee__group">
+      <img src='assets/images/IMG_0476.JPG' alt=''>
+      <img src='assets/images/IMG_0480.JPG' alt=''>
+      <img src='assets/images/IMG_0481.JPG' alt=''>
+      <img src='assets/images/IMG_0484.JPG' alt=''>
+      <img src='assets/images/IMG_0483.JPG' alt=''>
+      
+    </div>
+  
+    <div aria-hidden="true" class="marquee__group">
+      <img src='assets/images/IMG_0485.JPG' alt=''>
+      <img src='assets/images/IMG_0486.JPG' alt=''>
+      <img src='assets/images/IMG_0476.JPG' alt=''>
+      <img src='assets/images/IMG_0480.JPG' alt=''>
+      <img src='assets/images/IMG_0481.JPG' alt=''>
+    </div>
+  </div>
+  
+  <div class="marquee marquee--borders" style="--duration: 100s">
+    <div class="marquee__group">
+      <p>Fitness is Strength</p>
+      <p aria-hidden="true">Fitness is Strength</p>
+      <p aria-hidden="true">Fitness is Strength</p>
+    </div>
+  
+    <div aria-hidden="true" class="marquee__group">
+      <p>Fitness is Strength</p>
+      <p>Fitness is Strength</p>
+      <p>Fitness is Strength</p>
+    </div>
+  </div>
+  
+  <div class="marquee marquee--reverse">
+    <div class="marquee__group">
+        <img src='assets/images/IMG_0485.JPG' alt=''>
+        <img src='assets/images/IMG_0486.JPG' alt=''>
+        <img src='assets/images/IMG_0476.JPG' alt=''>
+        <img src='assets/images/IMG_0480.JPG' alt=''>
+        <img src='assets/images/IMG_0481.JPG' alt=''>
+    </div>
+  
+    <div aria-hidden="true" class="marquee__group">
+        <img src='assets/images/IMG_0476.JPG' alt=''>
+        <img src='assets/images/IMG_0480.JPG' alt=''>
+        <img src='assets/images/IMG_0481.JPG' alt=''>
+        <img src='assets/images/IMG_0484.JPG' alt=''>
+        <img src='assets/images/IMG_0483.JPG' alt=''>
+    </div>
+  </div>
