@@ -2,70 +2,60 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="video_gallery.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Video Gallery</title>
-<style>
-  /* CSS styles for the gallery */
-  .video-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-  }
-
-  .video-item {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio for responsive videos */
-    overflow: hidden;
-  }
-
-  .video-item video {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
-</style>
+<title>Vertical Video Carousel</title>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<link rel="stylesheet" href="video_gallery.css">
 </head>
 <body>
 
-<div class="video-gallery">
-  <!-- Video 1 -->
-  <div class="video-item">
-    <video controls>
-      <source src="assets/images/video1.mp4">
-      
-    </video>
-  </div>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <video controls>
+                <source src="./assets/images/video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="swiper-slide">
+            <video controls>
+                <source src="./assets/images/video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
 
-  <!-- Video 2 -->
-  <div class="video-item">
-    <video controls>
-      <source src="assets/images/video2.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
+        <div class="swiper-slide">
+          <video controls>
+              <source src="./assets/images/video3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+      </div>
 
-  <!-- Video 3 -->
-  <div class="video-item">
-    <video controls>
-      <source src="assets/images/video3.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-  <!-- Video 4 -->
-  <div class="video-item">
-    <video controls>
-      <source src="assets/images/video4.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-  <!-- Add more video items as needed -->
+      <div class="swiper-slide">
+        <video controls>
+            <source src="./assets/images/video4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+        <!-- Add more video slides here -->
+    </div>
 </div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    direction: 'vertical',
+    slidesPerView: 1,
+    spaceBetween: 0,
+    effect: 'slide',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesOffsetBefore: 0,
+    slidesOffsetAfter: 0,
+    loop: true,
+    loopedSlides: 2,
+});
+</script>
 
 </body>
 </html>

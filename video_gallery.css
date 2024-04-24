@@ -1,22 +1,51 @@
-/* CSS styles for the gallery */
-.video-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust video size as needed */
-    gap: 20px;
-    padding: 20px;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.swiper-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background: black; /* Optional: Set a black background */
+}
+
+.swiper-slide video {
+  width: auto;
+  height: 100vh;
+  max-width: 100%;
+  object-fit: contain;
+  transform-origin: top center;
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  0% {
+      transform: translateY(100%);
   }
-  
-  .video-item {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio for responsive videos */
-    overflow: hidden;
+  100% {
+      transform: translateY(0);
   }
-  
-  .video-item video {
-    position: absolute;
-    width: 400%;
-    height: 100%;
-    top: 0;
-    left: 0;
+}
+
+.swiper-slide.swiper-slide-prev video {
+  animation: slideOut 1s forwards;
+}
+
+@keyframes slideOut {
+  0% {
+      transform: translateY(0);
   }
-  
+  100% {
+      transform: translateY(-100%);
+  }
+}
